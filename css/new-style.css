@@ -1,0 +1,169 @@
+/* 增强尺寸的样式 */
+.game-category h2 {
+    font-size: 2.4rem !important;
+    margin-bottom: 2rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.tools {
+    gap: 3rem !important;
+}
+
+.tools a {
+    padding: 2rem !important;
+}
+
+.preview-container {
+    margin-bottom: 2rem !important;
+}
+
+.tool-name {
+    font-size: 1.8rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.tool-desc {
+    font-size: 1.2rem !important;
+    line-height: 1.5 !important;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* 游戏分类区域 */
+.game-section {
+    width: 95%;
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 1800px;
+}
+
+.game-category {
+    margin-bottom: 4rem;
+}
+
+.game-category h2 {
+    color: var(--category-color);
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* 工具卡片网格 */
+.tools {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    width: 100%;
+}
+
+/* 工具卡片 */
+.tools a {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--card-background);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.tools a:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* 预览图容器 */
+.preview-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 66.67%; /* 3:2 比例 */
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    background-color: var(--background-color);
+}
+
+/* 预览图 */
+.preview-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* 工具信息 */
+.tool-content {
+    padding: 1rem;
+}
+
+.tool-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.tool-desc {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    line-height: 1.5;
+}
+
+/* 响应式布局 */
+@media (max-width: 1440px) {
+    .tools {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tool-name {
+        font-size: 1.6rem;
+    }
+    
+    .tool-desc {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .game-section {
+        padding: 1.5rem;
+    }
+    
+    .game-category h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tools {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-category h2 {
+        font-size: 1.8rem;
+    }
+    
+    .preview-container {
+        padding-bottom: 75%; /* 4:3 比例 */
+    }
+    
+    .tool-name {
+        font-size: 1.4rem;
+    }
+    
+    .tool-desc {
+        font-size: 1rem;
+    }
+}

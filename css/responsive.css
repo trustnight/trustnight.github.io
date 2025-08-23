@@ -1,0 +1,104 @@
+/* 响应式布局样式 */
+.game-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    transition: max-width 0.3s ease;
+}
+
+/* 基础布局（移动端优先） */
+.tools {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.preview-container {
+    padding-bottom: 75%; /* 4:3 比例适合移动端竖屏 */
+}
+
+/* 平板和小屏幕电脑 */
+@media (min-width: 768px) {
+    .game-section {
+        max-width: 90%;
+    }
+    
+    .tools {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .preview-container {
+        padding-bottom: 65%;
+    }
+}
+
+/* 中等屏幕 */
+@media (min-width: 1024px) {
+    .game-section {
+        max-width: 1200px;
+    }
+    
+    .tools {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .preview-container {
+        padding-bottom: 60%;
+    }
+}
+
+/* 大屏幕 */
+@media (min-width: 1440px) {
+    .game-section {
+        max-width: 1400px;
+        padding: 0 2rem;
+    }
+    
+    .tools {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .preview-container {
+        padding-bottom: 56.25%; /* 16:9 比例 */
+    }
+
+    .tool-name {
+        font-size: 1.3rem;
+    }
+}
+
+/* 超宽屏幕 */
+@media (min-width: 1920px) {
+    .game-section {
+        max-width: 1800px;
+    }
+
+    .preview-container {
+        padding-bottom: 52%; /* 更扁平的比例 */
+    }
+
+    .tool-name {
+        font-size: 1.4rem;
+    }
+
+    .tool-desc {
+        font-size: 1rem;
+    }
+}
+
+/* 4K 及更高分辨率 */
+@media (min-width: 2560px) {
+    .game-section {
+        max-width: 2200px;
+    }
+
+    .tools {
+        gap: 3rem;
+    }
+
+    .preview-container {
+        padding-bottom: 50%;
+    }
+}
