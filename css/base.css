@@ -1,81 +1,219 @@
-/* PC端样式 */
-:root {
-    --primary-color: #4a90e2;
-    --background-color: #f5f5f5;
-    --card-background: #ffffff;
-    --text-color: #333333;
-    --hover-color: #357abd;
-    --secondary-color: #666666;
-    --category-color: #2c3e50;
-}
-
+/* 全局样式 */
 body {
     margin: 0;
     padding: 2rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #f5f5f5;
+    color: #333;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 h1 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    color: #4a90e2;
+    font-size: 3rem;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
-.tools {
-    max-width: 1200px;
+/* 游戏分类区域 */
+.game-section {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    margin: 0 auto;
     padding: 1rem;
 }
 
-.tools a {
-    background-color: var(--card-background);
-    border-radius: 12px;
-    padding: 2rem;
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 1.2rem;
+@media (min-width: 768px) {
+    .game-section {
+        width: 95%;
+        max-width: 1800px;
+        padding: 2rem;
+    }
+}
+
+.game-category {
+    margin-bottom: 3rem;
+}
+
+.game-category h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .game-category {
+        margin-bottom: 4rem;
+    }
+    
+    .game-category h2 {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.game-category h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #4a90e2;
+    border-radius: 3px;
+}
+
+/* 工具卡片网格 */
+.tools-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .tools-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tools-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .tools-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+    }
+}
+
+/* 工具卡片 */
+.tool-item {
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .tool-item {
+        border-radius: 16px;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    
+    .tool-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+}
+
+/* 预览图 */
+.preview-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+@media (min-width: 768px) {
+    .preview-container {
+        border-radius: 12px;
+    }
+}
+
+.preview-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 工具信息 */
+.tool-content {
+    text-align: center;
+}
+
+.tool-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.tool-desc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+    .tool-name {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tool-desc {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+}
+
+/* 作者信息 */
+.author {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.tools a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-    color: var(--primary-color);
+.author:hover {
+    color: #4a90e2;
 }
 
-/* 宽屏优化 */
-@media (min-width: 1440px) {
-    .tools {
-        grid-template-columns: repeat(4, 1fr);
-    }
+.github-icon {
+    width: 18px;
+    height: 18px;
+    color: #999;
+    transition: color 0.3s ease;
 }
 
-/* 窄屏优化 */
-@media (max-width: 768px) {
-    body {
-        padding: 1rem;
+@media (min-width: 768px) {
+    .author {
+        font-size: 1rem;
     }
     
-    h1 {
-        font-size: 2rem;
+    .github-icon {
+        width: 20px;
+        height: 20px;
     }
-    
-    .tools {
-        grid-template-columns: 1fr;
-    }
+}
+
+.author:hover .github-icon {
+    color: #4a90e2;
 }
