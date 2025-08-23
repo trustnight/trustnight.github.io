@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>游戏工具收集-初秋</title>
-    <link rel="stylesheet" href="css/mypages.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script>
+        // 设备检测和重定向
+        (function() {
+            function isMobile() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+            
+            if (isMobile() && !window.location.href.includes('mobile.html')) {
+                window.location.href = 'mobile.html';
+            }
+        })();
+    </script>
 </head>
 <body>
     <h1>游戏工具集</h1>
-    <div>
+    <div class="tools">
         <a href="https://trustnight.github.io/McCalculator-Web">qq14计算器</a>
         <a href="https://trustnight.github.io/McFATE">F·A·T·E 计时器</a>
         <a href="https://trustnight.github.io/McWeather">qq14 天气查询</a>
