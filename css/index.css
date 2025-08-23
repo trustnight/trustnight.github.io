@@ -99,7 +99,6 @@ h1 {
 
 /* 工具卡片 */
 .tool-item {
-    text-decoration: none;
     background-color: #fff;
     border-radius: 12px;
     padding: 1.5rem;
@@ -108,6 +107,16 @@ h1 {
     flex-direction: column;
     gap: 1.5rem;
     transition: all 0.3s ease;
+}
+
+.tool-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.tool-link:hover {
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {
