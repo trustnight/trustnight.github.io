@@ -1,0 +1,52 @@
+.game-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-category {
+    margin-bottom: 3rem;
+}
+
+.game-category h2 {
+    color: var(--category-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.tools a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tool-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.tool-desc {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* 宽屏优化 */
+@media (min-width: 1440px) {
+    .tools {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 窄屏优化 */
+@media (max-width: 768px) {
+    .game-category h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tools {
+        grid-template-columns: 1fr;
+    }
+}
