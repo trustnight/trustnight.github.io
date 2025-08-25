@@ -226,3 +226,30 @@ h1 {
 .author:hover .github-icon {
     color: #4a90e2;
 }
+
+.site-stats {
+    margin: 2rem auto 0;
+    max-width: 1200px;
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+.site-stats span { white-space: nowrap; }
+
+/* 添加在现有CSS之后 */
+#busuanzi_container_site_pv,
+#busuanzi_container_site_uv,
+#busuanzi_container_page_pv {
+    display: none; /* 默认隐藏，脚本加载完成后会自动显示 */
+}
+
+/* 数值高亮样式 */
+#busuanzi_value_site_pv,
+#busuanzi_value_site_uv,
+#busuanzi_value_page_pv {
+    font-weight: bold;
+    color: #333; /* 数值与描述文字区分 */
+}
