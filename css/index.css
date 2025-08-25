@@ -228,16 +228,27 @@ h1 {
 }
 
 .site-stats {
-    margin: 2rem auto 0;
-    max-width: 1200px;
+    margin: 1rem auto 2rem;
+    max-width: 1000px;
     text-align: center;
-    color: #888;
-    font-size: 0.95rem;
+    color: #666;
+    font-size: 1rem;
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     justify-content: center;
+    align-items: center;
 }
 .site-stats span { white-space: nowrap; }
+
+.site-stats span::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    margin: 0 10px 2px 0;
+}
 
 /* 添加在现有CSS之后 */
 #busuanzi_container_site_pv,
@@ -250,6 +261,7 @@ h1 {
 #busuanzi_value_site_pv,
 #busuanzi_value_site_uv,
 #busuanzi_value_page_pv {
-    font-weight: bold;
-    color: #333; /* 数值与描述文字区分 */
+    font-weight: 700;
+    color: #d59b00; /* 更黄一些 */
+    font-style: italic;
 }
