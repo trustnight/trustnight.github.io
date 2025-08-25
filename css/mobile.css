@@ -124,3 +124,28 @@ h2:after {
         font-size: 1.4rem;
     }
 }
+
+.site-stats {
+    margin: 1.5rem auto 0;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.site-stats span { white-space: nowrap; }
+
+#busuanzi_container_site_pv,
+#busuanzi_container_site_uv,
+#busuanzi_container_page_pv {
+    display: none;
+}
+
+#busuanzi_value_site_pv,
+#busuanzi_value_site_uv,
+#busuanzi_value_page_pv {
+    font-weight: bold;
+    color: #333;
+}
