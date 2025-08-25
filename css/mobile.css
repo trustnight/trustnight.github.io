@@ -131,7 +131,9 @@ h2:after {
     color: #666;
     font-size: 0.95rem;
 }
-.site-stats span { display: block; margin: 0.25rem 0; }
+.site-stats > span { display: block; margin: 0.25rem 0; white-space: nowrap; }
+/* 防止内部任意元素断行（数字与单位粘在一起） */
+.site-stats > span * { white-space: nowrap; }
 
 #busuanzi_container_site_pv,
 #busuanzi_container_site_uv,

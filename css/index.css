@@ -250,6 +250,15 @@ h1 {
     margin: 0 10px 2px 0;
 }
 
+@media (max-width: 640px) {
+    .site-stats {
+        flex-direction: column;
+        gap: 0.35rem;
+        align-items: center;
+    }
+    .site-stats span::before { display: none; }
+}
+
 /* 添加在现有CSS之后 */
 #busuanzi_container_site_pv,
 #busuanzi_container_site_uv,
