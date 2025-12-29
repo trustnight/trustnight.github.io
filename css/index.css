@@ -304,7 +304,7 @@ h1 {
 #busuanzi_container_site_pv,
 #busuanzi_container_site_uv,
 #busuanzi_container_page_pv {
-    display: none; /* 默认隐藏，脚本加载完成后会自动显示 */
+    display: inline-block; /* 默认显示，不再依赖脚本控制 */
 }
 
 /* 数值高亮样式 */

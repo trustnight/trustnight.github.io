@@ -138,7 +138,7 @@ h2:after {
 #busuanzi_container_site_pv,
 #busuanzi_container_site_uv,
 #busuanzi_container_page_pv {
-    display: none;
+    display: inline-block;
 }
 
 #busuanzi_value_site_pv,
